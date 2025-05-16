@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doodle Jump</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <div id="game-ui">
+            <div id="score">Очки: 0</div>
+            <div id="highscore">Рекорд: 0</div>
+            <div id="timer">Время: 60</div>
+        </div>
+        <canvas id="game-canvas"></canvas>
+        <div id="start-screen">
+            <h1>Doodle Jump</h1>
+            <button id="start-btn">Начать игру</button><br />
+            <p>Введите ваше имя:</p>
+            <input id=" name" type="text">
+            <p>Выберите сложность:</p>
+            <button id="easy-btn">Лёгкая</button>
+            <button id="med-btn">Средняя</button>
+            <button id="hard-btn">Тяжёлая</button>
+            <div class="controls">
+                <p>Управление: ← → или A D для движения</p>
+                <p>На мобильных: касание экрана</p>
+            </div>
+        </div>
+        <div id="game-over" class="hidden">
+            <h2>Игра окончена!</h2>
+            <p id="final-score">Ваш счет: 0</p>
+            <button id="restart-btn">Играть снова</button>
+        </div>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
