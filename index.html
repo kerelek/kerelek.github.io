@@ -55,6 +55,26 @@
         <!-- shows a full-page dialog that informs the user they're using an unsupported browser -->
         <a-entity zappar-compatibility-ui id="compatibility"></a-entity>
 
+      <!-- ОСНОВНОЙ СВЕТ -->
+      <a-light type="ambient" color="#FFFFFF" intensity="0.6"></a-light>
+      
+      <!-- ДИРЕКЦИОННЫЙ СВЕТ (как солнце) -->
+      <a-light type="directional" 
+               color="#FFFFFF" 
+               intensity="0.8" 
+               position="2 5 3"
+               cast-shadow="true">
+      </a-light>
+      
+      <!-- ТОЧЕЧНЫЙ СВЕТ (рядом с моделью) -->
+      <a-light type="point" 
+               color="#FFFFFF" 
+               intensity="1.0" 
+               position="0 3 2"
+               distance="10"
+               decay="2">
+      </a-light>
+
       <a-camera zappar-camera>
         <!-- Inside our camera, include a raycaster that looks down the center of the camera -->
         <!-- Use our 'collider-check' component to register the event handler -->
@@ -70,9 +90,7 @@
           <a-plane class="collidable" color="#000000" material="transparent: true; opacity: 0.8;" width="1" height="1" position="0 0 -0.01 "></a-plane>
 
           <!-- Include our 3D model-->
-           <a-entity light="type: ambient; color: #BBB"></a-entity>
-           <a-entity light="type: directional; color: #FFF; intensity: 0.6" position="-0.5 1 1"></a-entity>
-          <a-entity rotation="90 0 0" id="model" gltf-model="url(assets/2nmstu.glb)" animation-mixer="clip: null" scale="0.1 0.1 0.1"></a-entity>
+          <a-entity rotation="90 0 0" id="model" gltf-model="url(assets/2nmstu.glb)" animation-mixer="clip: null" scale="0.5 0.5 0.5"></a-entity>
 
         </a-entity>
 
