@@ -12,7 +12,7 @@
         <meta name="author" content="Ваше имя">
       
       
-        <link rel="canonical" href="https://ваш-логин.github.io/docs-portal/usage/">
+        <link rel="canonical" href="https://kerelek.github.io/docs-portal/usage/">
       
       
         <link rel="prev" href="../installation/">
@@ -78,6 +78,11 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Перейти к содержанию
+        </a>
       
     </div>
     <div data-md-component="announce">
@@ -430,6 +435,26 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Использование
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -447,6 +472,64 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Содержание">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Интерфейс программы
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Работа со студентами
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Работа со студентами">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Добавление студента
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -496,58 +579,40 @@
 
 
 
-  <h1>Использование</h1>
-
-<p>markdown</p>
-<p># Руководство пользователя</p>
-<p>## Интерфейс программы</p>
+<h1 id="_1">Руководство пользователя<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<h2 id="_2">Интерфейс программы<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p>Главное окно состоит из нескольких областей:</p>
-<p>1. **Панель навигации** – переключение между разделами</p>
-<p>2. **Область данных** – таблицы со студентами и оценками</p>
-<p>3. **Панель инструментов** – кнопки действий</p>
-<p>4. **Строка состояния** – информация о текущем режиме</p>
-<p>![Интерфейс программы](images/interface.png)</p>
-<p>## Работа со студентами</p>
-<p>### Добавление студента</p>
-<p>1. Перейдите в раздел **"Студенты"**</p>
-<p>2. Нажмите кнопку **"Добавить"** (или <code>Ctrl+N</code>)</p>
-<p>3. Заполните поля формы:</p>
-<p>&#x20;  - Фамилия, имя, отчество</p>
-<p>&#x20;  - Дата рождения</p>
-<p>&#x20;  - Группа</p>
-<p>&#x20;  - Номер зачётной книжки</p>
-<p>4. Нажмите **"Сохранить"**</p>
+<ol>
+<li><strong>Панель навигации</strong> – переключение между разделами</li>
+<li><strong>Область данных</strong> – таблицы со студентами и оценками</li>
+<li><strong>Панель инструментов</strong> – кнопки действий</li>
+<li><strong>Строка состояния</strong> – информация о текущем режиме</li>
+</ol>
+<p><img alt="Интерфейс программы" src="../images/interface.png" /><br />
+<em>(поместите скриншот в <code>docs/images/interface.png</code>)</em></p>
+<h2 id="_3">Работа со студентами<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<h3 id="_4">Добавление студента<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Перейдите в раздел <strong>«Студенты»</strong></li>
+<li>Нажмите кнопку <strong>«Добавить»</strong> (или <code>Ctrl+N</code>)</li>
+<li>Заполните поля формы:</li>
+<li>Фамилия, имя, отчество</li>
+<li>Дата рождения</li>
+<li>Группа</li>
+<li>Номер зачётной книжки</li>
+<li>Нажмите <strong>«Сохранить»</strong></li>
+</ol>
 <p>```python</p>
-<p># Пример добавления через API</p>
-<p>import requests</p>
-<p>data = {</p>
-<p>&#x20;   "last_name": "Иванов",</p>
-<p>&#x20;   "first_name": "Иван",</p>
-<p>&#x20;   "group": "АПИб-22",</p>
-<p>&#x20;   "student_id": "2024001"</p>
-<p>}</p>
-<p>response = requests.post("http://localhost:8080/api/students", json=data)</p>
-<p>print(response.json())</p>
-<p>Поиск студентов</p>
-<p>•   Используйте строку поиска в верхней части таблицы</p>
-<p>•   Можно искать по фамилии, группе или номеру зачётки</p>
-<p>•   Доступна фильтрация по группе из выпадающего списка</p>
-<p>Ввод оценок</p>
-<p>1. Выберите студента в списке</p>
-<p>2. Перейдите на вкладку «Оценки»</p>
-<p>3. Выберите предмет из списка</p>
-<p>4. Введите оценку (2-5) или "н/а" (не аттестован)</p>
-<p>5. Нажмите «Сохранить»</p>
-<p>Формирование отчётов</p>
-<p>Отчёт по группе</p>
-<p>•   Выберите группу</p>
-<p>•   Нажмите «Отчёт» → «По группе»</p>
-<p>•   Укажите период (семестр/год)</p>
-<p>•   Нажмите «Сформировать»</p>
-<p>Экспорт в Excel</p>
-<p>1. Сформируйте отчёт</p>
-<p>2. Нажмите «Экспорт» → «Excel»</p>
-<p>3. Выберите место сохранения</p>
+<h1 id="api">Пример добавления через API<a class="headerlink" href="#api" title="Permanent link">&para;</a></h1>
+<p>import requests
+data = {
+    "last_name": "Иванов",
+    "first_name": "Иван",
+    "group": "АПИб-22",
+    "student_id": "2024001"
+}
+response = requests.post("http://localhost:8080/api/students", json=data)
+print(response.json())</p>
 
 
 

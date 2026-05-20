@@ -12,7 +12,7 @@
         <meta name="author" content="Ваше имя">
       
       
-        <link rel="canonical" href="https://ваш-логин.github.io/docs-portal/api/">
+        <link rel="canonical" href="https://kerelek.github.io/docs-portal/api/">
       
       
         <link rel="prev" href="../usage/">
@@ -76,6 +76,11 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
+      
+        
+        <a href="#api" class="md-skip">
+          Перейти к содержанию
+        </a>
       
     </div>
     <div data-md-component="announce">
@@ -455,6 +460,26 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -472,6 +497,64 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Содержание">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Общая информация
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Эндпоинты
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Эндпоинты">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-students" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GET /students
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -494,99 +577,125 @@
 
 
 
-  <h1>API</h1>
-
-<p>markdown</p>
-<p># API документация</p>
-<p>## Общая информация</p>
-<p>Базовый URL: <code>https://api.example.com/v1</code></p>
-<p>Формат данных: JSON</p>
-<p>Аутентификация: Bearer Token (JWT)</p>
-<p>## Эндпоинты</p>
-<p>### GET /students</p>
+<h1 id="api">API документация<a class="headerlink" href="#api" title="Permanent link">&para;</a></h1>
+<h2 id="_1">Общая информация<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>Базовый URL: <code>https://api.example.com/v1</code><br />
+Формат данных: JSON<br />
+Аутентификация: Bearer Token (JWT)</p>
+<h2 id="_2">Эндпоинты<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<h3 id="get-students">GET /students<a class="headerlink" href="#get-students" title="Permanent link">&para;</a></h3>
 <p>Получение списка студентов</p>
-<p>**Параметры запроса:**</p>
-<p>| Параметр | Тип | Обязательный | Описание |</p>
-<p>|----------|-----|--------------|----------|</p>
-<p>| group | string | нет | Фильтр по группе |</p>
-<p>| course | int | нет | Фильтр по курсу |</p>
-<p>| limit | int | нет | Количество записей (по умолч. 20) |</p>
-<p>| offset | int | нет | Смещение для пагинации |</p>
-<p>**Пример запроса:**</p>
-<p>```bash</p>
-<p>curl -X GET "https://api.example.com/v1/students?group=ИВТ-201\&amp;limit=10" \</p>
-<p>&#x20; -H "Authorization: Bearer ваш_токен"</p>
-<p>Пример ответа:</p>
-<p>json</p>
-<p>{</p>
-<p>&#x20; "success": true,</p>
-<p>&#x20; "data": [</p>
-<p>&#x20;   {</p>
-<p>&#x20;     "id": 1,</p>
-<p>&#x20;     "last_name": "Иванов",</p>
-<p>&#x20;     "first_name": "Иван",</p>
-<p>&#x20;     "group": "АПИб-22",</p>
-<p>&#x20;     "course": 2</p>
-<p>&#x20;   }</p>
-<p>&#x20; ],</p>
-<p>&#x20; "total": 25,</p>
-<p>&#x20; "limit": 10,</p>
-<p>&#x20; "offset": 0</p>
-<p>}</p>
-<p>POST /students</p>
-<p>Создание нового студента</p>
+<p><strong>Параметры запроса:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Параметр</th>
+<th>Тип</th>
+<th>Обязательный</th>
+<th>Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>group</td>
+<td>string</td>
+<td>нет</td>
+<td>Фильтр по группе</td>
+</tr>
+<tr>
+<td>course</td>
+<td>int</td>
+<td>нет</td>
+<td>Фильтр по курсу</td>
+</tr>
+<tr>
+<td>limit</td>
+<td>int</td>
+<td>нет</td>
+<td>Количество записей (по умолч. 20)</td>
+</tr>
+<tr>
+<td>offset</td>
+<td>int</td>
+<td>нет</td>
+<td>Смещение для пагинации</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Пример запроса:</strong></p>
+<p>```bash
+curl -X GET "https://api.example.com/v1/students?group=ИВТ-201&amp;limit=10" \
+  -H "Authorization: Bearer ваш_токен"
+Пример ответа:</p>
+<p>json
+{
+  "success": true,
+  "data": [
+    {
+      "id": 1,
+      "last_name": "Иванов",
+      "first_name": "Иван",
+      "group": "АПИб-22",
+      "course": 2
+    }
+  ],
+  "total": 25,
+  "limit": 10,
+  "offset": 0
+}
+POST /students
+Создание нового студента</p>
 <p>Тело запроса:</p>
-<p>json</p>
-<p>{</p>
-<p>&#x20; "last_name": "Петров",</p>
-<p>&#x20; "first_name": "Петр",</p>
-<p>&#x20; "middle_name": "Петрович",</p>
-<p>&#x20; "birth_date": "2005-03-15",</p>
-<p>&#x20; "group": "ИВТ-202",</p>
-<p>&#x20; "student_id": "2024002"</p>
-<p>}</p>
-<p>Ответ:</p>
-<p>json</p>
-<p>{</p>
-<p>&#x20; "success": true,</p>
-<p>&#x20; "data": {</p>
-<p>&#x20;   "id": 2,</p>
-<p>&#x20;   "message": "Студент успешно создан"</p>
-<p>&#x20; }</p>
-<p>}</p>
-<p>GET /students/{id}</p>
-<p>Получение студента по ID</p>
+<p>json
+{
+  "last_name": "Петров",
+  "first_name": "Петр",
+  "middle_name": "Петрович",
+  "birth_date": "2005-03-15",
+  "group": "ИВТ-202",
+  "student_id": "2024002"
+}
+Ответ:</p>
+<p>json
+{
+  "success": true,
+  "data": {
+    "id": 2,
+    "message": "Студент успешно создан"
+  }
+}
+GET /students/{id}
+Получение студента по ID</p>
 <p>Параметры пути:</p>
-<p>•   id (int) – идентификатор студента</p>
+<p>id (int) – идентификатор студента</p>
 <p>Ответ:</p>
-<p>json</p>
-<p>{</p>
-<p>&#x20; "success": true,</p>
-<p>&#x20; "data": {</p>
-<p>&#x20;   "id": 1,</p>
-<p>&#x20;   "last_name": "Иванов",</p>
-<p>&#x20;   "first_name": "Иван",</p>
-<p>&#x20;   "middle_name": "Иванович",</p>
-<p>&#x20;   "birth_date": "2005-01-01",</p>
-<p>&#x20;   "group": "АПИб-22",</p>
-<p>&#x20;   "course": 2,</p>
-<p>&#x20;   "grades": [</p>
-<p>&#x20;     {</p>
-<p>&#x20;       "subject": "Математика",</p>
-<p>&#x20;       "grade": 5,</p>
-<p>&#x20;       "date": "2025-02-20"</p>
-<p>&#x20;     }</p>
-<p>&#x20;   ]</p>
-<p>&#x20; }</p>
-<p>}</p>
-<p>Коды ошибок</p>
-<p>Код Описание    Что делать</p>
-<p>400 Неверный запрос Проверьте параметры</p>
-<p>401 Не авторизован  Проверьте токен</p>
-<p>403 Доступ запрещён Недостаточно прав</p>
-<p>404 Не найдено  Проверьте ID ресурса</p>
-<p>500 Ошибка сервера  Обратитесь в поддержку</p>
-<p>text</p>
+<p>json
+{
+  "success": true,
+  "data": {
+    "id": 1,
+    "last_name": "Иванов",
+    "first_name": "Иван",
+    "middle_name": "Иванович",
+    "birth_date": "2005-01-01",
+    "group": "АПИб-22",
+    "course": 2,
+    "grades": [
+      {
+        "subject": "Математика",
+        "grade": 5,
+        "date": "2025-02-20"
+      }
+    ]
+  }
+}
+Коды ошибок
+Код Описание    Что делать
+400 Неверный запрос Проверьте параметры
+401 Не авторизован  Проверьте токен
+403 Доступ запрещён Недостаточно прав
+404 Не найдено  Проверьте ID ресурса
+500 Ошибка сервера  Обратитесь в поддержку</p>
 
 
 
