@@ -2,7 +2,7 @@
 site_name: Портал документации
 site_description: Полная документация по проекту "Учёт успеваемости студентов"
 site_author: Ваше имя
-site_url: https://ваш-логин.github.io/docs-portal
+site_url: https://kerelek.github.io/docs-portal
 
 # Тема оформления
 theme:
